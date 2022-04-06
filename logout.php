@@ -1,8 +1,7 @@
 <?php
 session_start();
-include("db.php");
 
-$pagename="Clear Smart Basket";  //Create and populate a variable called $pagename
+$pagename="LOGOUT";  //Create and populate a variable called $pagename
 echo "<link rel=stylesheet type=text/css href=mystylesheet.css>"; //Call in stylesheet
 
 echo "<title>".$pagename."</title>"; //display name of the page as window title
@@ -14,10 +13,9 @@ include ("detectlogin.php");
 
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
-unset($_SESSION['basket']);
-echo "<p>Your Basket Has Been Cleared</p>";
-
-
+echo "<p> Thank you, ".$_SESSION['fname']." ".$_SESSION['sname']."</p>"; unset($_SESSION);
+session_destroy();
+echo "<br><p>You are now logged out</p>";
 
 include("footfile.html"); //include head layout
 

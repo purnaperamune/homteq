@@ -10,90 +10,29 @@ include ("headfile.html");  //include header layout file
 
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
-echo "<form action=signup_process.php method=post>";  
-			echo "<table style='border:0px'>"; 
-				echo "<tr>"; 
-				echo "<td  style='border:0px'>"; 
-				echo "*First Name";
-				echo"</td>";
-				echo "<td  style='border:0px'>"; 
-				echo "<input type='text'  name='fname'>";
-				echo"</td>";
-				echo "</tr>"; 
-				
-				echo "<tr>"; 
-				echo "<td  style='border:0px'>"; 
-				echo "*Last Name";
-				echo"</td>";
-				echo "<td  style='border:0px' >"; 
-				echo "<input type='text'  name='lname'>";
-				echo"</td>";
-				echo "</tr>";
-				
-				echo "<tr>"; 
-				echo "<td  style='border:0px'>"; 
-				echo "*Address";
-				echo"</td>";
-				echo "<td  style='border:0px'>"; 
-				echo "<input type='text'  name='address'>";
-				echo"</td>";
-				echo "</tr>";
-				
-				echo "<tr>"; 
-				echo "<td  style='border:0px'>"; 
-				echo "*PostCode";
-				echo"</td>";
-				echo "<td  style='border:0px'>"; 
-				echo "<input type='text'  name='postcode'>";
-				echo"</td>";
-				echo "</tr>";
-				
-				echo "<tr>"; 
-				echo "<td  style='border:0px'>"; 
-				echo "*Tel NO";
-				echo"</td>";
-				echo "<td  style='border:0px'>"; 
-				echo "<input type='text'  name='tel'>";
-				echo"</td>";
-				echo "</tr>";
-				
-				echo "<tr>"; 
-				echo "<td  style='border:0px'>"; 
-				echo "*Email Address";
-				echo"</td>";
-				echo "<td  style='border:0px'>"; 
-				echo "<input type='email'  name='email'>";
-				echo"</td>";
-				echo "</tr>";
-				
-				echo "<tr>"; 
-				echo "<td  style='border:0px'>"; 
-				echo "*Password";
-				echo"</td>";
-				echo "<td  style='border:0px'>"; 
-				echo "<input type='password'  name='pwd'>";
-				echo"</td>";
-				echo "</tr>";
-				
-				echo "<tr>"; 
-				echo "<td  style='border:0px'>";
-				echo "*Confirm password";
-				echo"</td>";
-				echo "<td  style='border:0px'>"; 
-				echo "<input type='password'  name='conpwd'>";
-				echo"</td>";
-				echo "</tr>";
-				
-				echo "<tr>"; 
-				echo "<td  style='border:0px'>";
-				echo "<input type=submit value='Sign up'>";
-				echo"</td>";
-				echo "<td  style='border:0px'>";
-				echo "<input type=submit value='Clear Form'>";
-				echo"</td>";
-				echo "</tr>";	 
-			echo "</table>"; 
-		echo "</form>";
+//create a HTML form to capture the user's details
+echo "<form method=post action=signup_process.php>" ;
+echo "<table style='border: 0px'>";
+echo "<tr><td style='border: 0px'>*First Name </td>";
+echo "<td style='border: 0px'><input type=text name=r_firstname size=35></td></tr>";
+echo "<tr><td style='border: 0px'>*Last Name </td>";
+echo "<td style='border: 0px'><input type=text name=r_lastname size=35></td></tr>";
+echo "<tr><td style='border: 0px'>*Address </td>";
+echo "<td style='border: 0px'><input type=text name=r_address size=35></td></tr>";
+echo "<tr><td style='border: 0px'>*Postcode </td>";
+echo "<td style='border: 0px'><input type=text name=r_postcode size=35></td></tr>";
+echo "<tr><td style='border: 0px'>*Tel No </td>";
+echo "<td style='border: 0px'><input type=text name=r_telno size=35></td></tr>";
+echo "<tr><td style='border: 0px'>*Email Address </td>";
+echo "<td style='border: 0px'><input type=text name=r_email size=35></td></tr>";
+echo "<tr><td style='border: 0px'>*Password </td>";
+echo "<td style='border: 0px'><input type=password name=r_password1 maxlength=10 size=35></td></tr>";
+echo "<tr><td style='border: 0px'>*Confirm Password </td>";
+echo "<td style='border: 0px'><input type=password name=r_password2 maxlength=10 size=35></td></tr>";
+echo "<tr>";
+echo "<td style='border: 0px'><input type=submit value='Sign Up' name='submitbtn' id='submitbtn'></td>"; echo "<td style='border: 0px'><input type=reset value='Clear Form' name='submitbtn' id='submitbtn'> </td>"; echo "</tr>";
+echo "</table>";
+echo "</form>" ;
 
 
 include("footfile.html"); //include head layout
